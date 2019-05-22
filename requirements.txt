@@ -1,3 +1,6 @@
 numpy
 googledrivedownloader
 shapely
+glob
+opencv-python
+shapely
