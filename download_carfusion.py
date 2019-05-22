@@ -18,7 +18,7 @@ gdd.download_file_from_google_drive(file_id='1W0Ty7vZbnAGyvf0RNeVXcNJV6e7kcqzZ',
                                     overwrite=True)
 
 gdd.download_file_from_google_drive(file_id='1T253FkwEfKEJyegHNztRPQX_bSjZUznf',
-                                    dest_path='./datasets/carfusion/car_fifth2.zip',
+                                    dest_path='./datasets/carfusion/train/car_fifth2.zip',
                                     unzip=True,
                                     showsize=True,
                                     overwrite=True)
