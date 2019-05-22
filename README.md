@@ -8,12 +8,19 @@ IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2018.
 
 ## Requirements
 - Python 3.6
-- OpenCV > 3.0
+- Virtualenv
+- OpenCV 
 - Numpy
 - Glob
 - googledrivedownloader
 - shapely
-
+## Setup
+To download the data and to convert the data to coco format to train the data with any of your detection pipeline
+'''
+virtualenv carfusion2coco -p python3.6
+source carfusion2coco/bin/activate
+sh carfusion_coco_setup.sh
+'''
 
 ## Dataset((14 Keypoints annotations for 100,000 cars(53,000 Images)))
 
