@@ -32,3 +32,8 @@ To visualize the data:
 wget http://www.cs.cmu.edu/~ILIM/projects/IM/CarFusion/Script/Visualize.py
 python Visualize.py PathToData CamID_FrameID
 ```
+
+For example:
+```
+python Visualize.py ./datasets/carfusion/train/car_butler1/ 16_06401
+```
