@@ -135,7 +135,7 @@ if __name__ == "__main__":
     # expect sub-folder for subsets
     data["images"] = []
     data["annotations"] = []
-    json_name = path_dir + args.output_filename
+    json_name = args.output_filename
     loop=0
     count_images=0
     for sub_dir in os.listdir(path_dir):
