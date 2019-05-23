@@ -5,10 +5,8 @@ import matplotlib.pyplot as plt
 import pylab
 pylab.rcParams['figure.figsize'] = (8.0, 10.0)
 
-dataDir='/home/dinesh/MinhData/Labels/data/carfusion/car_fifth/'
-dataDir='/home/dinesh/BestDetector/mask-rcnn.pytorch/data/carfusion/car_fifth/'
-dataType='train2017'
-dataType='fifth'
+dataDir='./datasets/carfusion/'
+dataType='keypoints_train'
 
 
 # initialize COCO api for person keypoints annotations
@@ -21,7 +19,8 @@ imgIds = coco_kps.getImgIds(catIds=catIds );
 img = coco_kps.loadImgs(imgIds[np.random.randint(0,len(imgIds))])[0]
 
 print(coco_kps.getCatIds(),img)
-I = io.imread(dataDir+'/images/'+img['file_name'])
+I = io.imread(dataDir+'train/'+img['file_name'])
+
 
 # load and display keypoints annotations
 plt.imshow(I); plt.axis('off')
