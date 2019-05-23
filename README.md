@@ -14,13 +14,15 @@ IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2018.
 - Glob
 - googledrivedownloader
 - shapely
-
+-Cython
 
 ## Setup
 To download the data and to convert the data to coco format to train the data with any of your detection pipeline
 ```
 virtualenv carfusion2coco -p python3.6
 source carfusion2coco/bin/activate
+pip install cython
+pip install -r requirements
 sh carfusion_coco_setup.sh
 ```
 ## Dataset((14 Keypoints annotations for 100,000 cars(53,000 Images)))

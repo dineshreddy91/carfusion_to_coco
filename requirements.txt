@@ -5,3 +5,4 @@ glob3
 opencv-python
 shapely
 requests
+pycocotools
