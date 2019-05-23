@@ -14,7 +14,7 @@ IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2018.
 - Glob
 - googledrivedownloader
 - shapely
--Cython
+- Cython
 
 ## Setup
 To download the data and  convert it to coco format using the following commandse
