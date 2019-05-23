@@ -17,7 +17,7 @@ IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2018.
 -Cython
 
 ## Setup
-To download the data and to convert the data to coco format to train the data with any of your detection pipeline
+To download the data and  convert it to coco format using the following commandse
 ```
 virtualenv carfusion2coco -p python3.6
 source carfusion2coco/bin/activate
@@ -29,9 +29,9 @@ sh carfusion_coco_setup.sh
 
 We provide mannual annotations of 14 semantic keypoints for 100,000 car instances (sedan, suv, bus, and truck) from 53,000 images captured from 18 moving cameras at Multiple intersections in Pittsburgh, PA. To view the labels, please run the following command:
 
-To visualize the data:
+## To visualize the data
+Visualization of the carfusion original labels
 ```
-wget http://www.cs.cmu.edu/~ILIM/projects/IM/CarFusion/Script/Visualize.py
 python Visualize.py PathToData CamID_FrameID
 ```
 
@@ -39,3 +39,11 @@ For example:
 ```
 python Visualize.py ./datasets/carfusion/train/car_butler1/ 16_06401
 ```
+
+
+Visualization of the coco format labels
+
+```
+python visualize_carfusion_coco.py
+```
+
