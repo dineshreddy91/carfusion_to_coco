@@ -6,3 +6,5 @@ opencv-python
 shapely
 requests
 pycocotools
+matplotlib
+scikit-image
