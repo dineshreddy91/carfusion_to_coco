@@ -247,17 +247,14 @@ def get_keypoints_gt(b):
 	indices = []
 	for loop,kp in enumerate(keypoints):
 		if len(kp)>0:
-			kp_float.append([float(kp.split(',')[0]),float(kp.split(',')[1]),int(kp.split(',')[2])])
+                        kp_float.append([float(kp.split(',')[0]),float(kp.split(',')[1]),int(kp.split(',')[2])])
 			indices.append(int(kp.split(',')[3]))
-	
 	kp_all = []
-	for loop_kp in range(max(indices)):
-		kp_final = np.ones((16,3))*0 
-		for loop,kp in enumerate(kp_float):
-			if indices[loop] == loop_kp+1:
-				#print(gt_indices,kp[2])#kp_final[t,0:2] = kp[0:2]
+	for loop_kp in range(max(indices)+1):
+		kp_final = np.zeros((16,3))
+                for loop,kp in enumerate(kp_float):
+			if indices[loop] == loop_kp:
 				t = correspondence[gt_indices.index(kp[2])]#kp_final[t,0:2] = kp[0:2]
-				#print(kp[2],t,correspondence[gt_indices.index(kp[2])])
 				kp_final[t,0:2] = kp[0:2]
 				kp_final[t,2] = 100
 		kp_all.append(np.round(kp_final.astype(np.float)).astype(np.int))
@@ -310,7 +307,6 @@ def main():
 		Folder = '.'
 		GroundTruth_labels = Folder+'/gt/*.txt'
 	
-	print(GroundTruth_labels)
 	save = 1
 	display = 1
 	allfiles = glob.glob(GroundTruth_labels)
@@ -320,11 +316,11 @@ def main():
 			os.mkdir(Folder+'/images_labeled')
 		except:
 			print('Folder exists')  
-			
 	for a,b in enumerate(allfiles):
 		#b = allfiles[17]
 		filename = b.split('/')[-1]
 		kp_all_GT = get_keypoints_gt(b)
+
 
 		image_name = Folder + '/images_jpg/'+filename.split('/')[-1].split('.')[0] + '.jpg'
 		img = cv2.imread(image_name)
