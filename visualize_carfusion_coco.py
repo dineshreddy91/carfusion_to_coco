@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import pylab
 pylab.rcParams['figure.figsize'] = (8.0, 10.0)
 
-dataDir='./datasets/carfusion/'
+dataDir=''
 dataType='keypoints_train'
 
 
