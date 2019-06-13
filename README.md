@@ -21,7 +21,7 @@ To download the data and  convert it to coco format using the following commands
 ```
 virtualenv carfusion2coco -p python3.6
 source carfusion2coco/bin/activate
-pip install cython
+pip install cython numpy
 pip install -r requirements.txt
 sh carfusion_coco_setup.sh
 ```
