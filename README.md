@@ -23,6 +23,7 @@ virtualenv carfusion2coco -p python3.6
 source carfusion2coco/bin/activate
 pip install cython numpy
 pip install -r requirements.txt
+python download_carfusion.py (This file need to be downloaded by requesting, please fill this form to get access to the data)
 sh carfusion_coco_setup.sh
 ```
 ## Dataset((14 Keypoints annotations for 100,000 cars(53,000 Images)))
