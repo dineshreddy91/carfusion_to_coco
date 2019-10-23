@@ -17,13 +17,13 @@ IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2018.
 - Cython
 
 ## Setup
-To download the data and  convert it to coco format using the following commandse
+To download the data you need to fill the form [Access Form](https://forms.gle/FCUcbt3jD1hB6ja57) and convert it to coco format using the following commands:
 ```
 virtualenv carfusion2coco -p python3.6
 source carfusion2coco/bin/activate
 pip install cython numpy
 pip install -r requirements.txt
-python download_carfusion.py (This file need to be downloaded by requesting, please fill [Access Form](https://forms.gle/FCUcbt3jD1hB6ja57) to get access to the data)
+python download_carfusion.py (This file need to be downloaded by requesting, please fill to get access to the data)
 sh carfusion_coco_setup.sh
 ```
 ## Dataset((14 Keypoints annotations for 100,000 cars(53,000 Images)))
